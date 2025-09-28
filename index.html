@@ -18,7 +18,8 @@
             document.body.innerHTML = "<h1>Error: Date is before week 1.</h1>";
         } else {
             var url = "http://timetablingunmc.nottingham.ac.uk:8006/reporting/Individual;programme+of+study;id;UG/M1027/M7UMTENG/F/01%0D%0A?days=1-5&weeks=" + week + "&periods=3-20&template=SWSCUST+programme+of+study+Individual&height=100&week=100";
-            window.location.href = url;
+            // window.location.href = url;
+            document.body.innerHTML = "<h1>Testing</h1>"
         }
     </script>
 </head>
