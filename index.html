@@ -6,18 +6,18 @@
     <title>Timetable Redirect</title>
     <script>
         // Calculate week and redirect
-        var startDate = new Date(2025, 7, 30); // August 30, 2025 (Saturday) - start of week 1
+        var startDate = new Date(2026, 7, 29); // August 29, 2026 (Saturday) - start of week 1
         var today = new Date();
         var timeDiff = today.getTime() - startDate.getTime();
         var deltaDays = Math.floor(timeDiff / (1000 * 3600 * 24));
         var week = Math.floor(deltaDays / 7) + 1;
         
-        if (week > 34) {
-            document.body.innerHTML = "<h1>Error: Today is week " + week + ", which is beyond week 34.</h1>";
+        if (week > 35) {
+            document.body.innerHTML = "<h1>Error: Today is week " + week + ", which is beyond week 35.</h1>";
         } else if (week < 1) {
             document.body.innerHTML = "<h1>Error: Date is before week 1.</h1>";
         } else {
-            var url = "http://timetablingunmc.nottingham.ac.uk:8006/reporting/Individual;programme+of+study;id;UG/M1027/M7UMTENG/F/01%0D%0A?days=1-5&weeks=" + week + "&periods=3-20&template=SWSCUST+programme+of+study+Individual&height=100&week=100";
+            var url = "http://timetablingunmc.nottingham.ac.uk:8016/reporting/Individual;programme+of+study;id;UG/M1027/M7UMTENG/F/02%0D%0A?days=1-5&weeks=" + week + "&periods=3-20&template=SWSCUST+programme+of+study+Individual&height=100&week=100";
             window.location.href = url;
         }
     </script>
